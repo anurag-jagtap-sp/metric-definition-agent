@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local data and state
+*.duckdb
+*.db
+*.sqlite
+data/
+
+# dbt
+semantic-layer/target/
+semantic-layer/dbt_packages/
+semantic-layer/logs/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
