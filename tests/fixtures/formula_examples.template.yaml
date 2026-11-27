@@ -1,0 +1,40 @@
+# Formula detector test cases (Phase 0). NOT an answer key for metric definitions.
+#
+# The real examples live in formula_examples.local.yaml (gitignored while the repo is public,
+# because they quote internal Confluence pages). This template shows the format.
+#
+# What counts as a formula (only these are drafted into metrics):
+#   equation              X = A / B, or arithmetic operators between terms
+#   calculation_sentence  "calculated as the sum of ...", "divided by", "% of"
+#   table_row             a row in a table whose column holds a formula or calculation rule
+# `text` is the span as rendered in Confluence: markdown escapes and **bold**/_italic_ markers
+# removed, otherwise verbatim from the page version listed.
+#
+# A section that only names a metric, with no formula or calculation rule, is not a formula
+# (expected_formula: false, kind: null) and is skipped with a reason in the run report.
+
+version: 1
+examples:
+  - id: example-equation
+    placeholder: true
+    page_id: "<confluence page id>"
+    page_title: "<page title>"
+    page_version: 1
+    space: "<space key>"
+    url: "<page url>"
+    section_path: "<Heading > Subheading>"
+    kind: equation
+    text: "<exact formula text copied from the page>"
+    expected_formula: true
+
+  - id: example-mention-only
+    placeholder: true
+    page_id: "<confluence page id>"
+    page_title: "<page title>"
+    page_version: 1
+    space: "<space key>"
+    url: "<page url>"
+    section_path: "<Heading > Subheading>"
+    kind: null
+    text: "<a sentence that names a metric but states no formula>"
+    expected_formula: false

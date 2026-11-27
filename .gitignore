@@ -24,6 +24,13 @@ semantic-layer/target/
 semantic-layer/dbt_packages/
 semantic-layer/logs/
 
+# Internal Confluence quotes stay local while the repo is public
+tests/fixtures/*.local.yaml
+
+# Stray nested clone and Office lock files
+metric-definition-agent/
+~$*
+
 # OS / editor
 .DS_Store
 .idea/
