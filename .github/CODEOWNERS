@@ -1,0 +1,7 @@
+# Reviews are routed to the owners below; branch protection requires a code owner's approval.
+# Replace with the real metric owners per domain as they are confirmed.
+
+*                        @anurag-jagtap-sp
+
+# Approved metric definitions (Layer 1)
+/semantic-layer/models/  @anurag-jagtap-sp
